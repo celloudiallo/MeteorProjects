@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "simple-schema": {},
+    "collection2": {},
+    "collection-helpers": {},
+    "iron-router": {},
+    "spin": {},
+    "moment": {},
+    "collectionFS": {},
+    "cfs-public-folder": {},
+    "cfs-ui": {},
+    "accounts-ui-bootstrap-3": {},
+    "bootboxjs": {},
+    "autocomplete": {}
+  }
+}

@@ -1,0 +1,27 @@
+<template name='qrScan'>
+  <!--Pop-up Window-->
+  <div class="modal fade popup-qrscan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">QR Code Scanner</h4>
+        </div>
+        <div class="modal-body">
+          {{#if errorMsg}}
+            <p>{{errorMsg}}</p>
+          {{else}}
+            <video class="videoOutput" style="display:none;"></video>
+            <canvas class="canvasOutput"></canvas>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Form Control-->
+  {{#if running}}
+    <button type="button" class='btn btn-default button-stop'>Stop Scan</button>
+  {{else}}
+    <button type="button" class='btn btn-default button-start'>Start Scan</button>
+  {{/if}}
+</template>

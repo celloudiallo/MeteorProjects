@@ -1,0 +1,14 @@
+<template name="inspectionItem">
+  <li class="dd-item">
+    <table class="inspectionItem-buttons">
+      {{#if getEditAccess}}
+      <button type="button" class="btn btn-danger btn-xs inspectionItem-remove"><span class="glyphicon glyphicon-remove"></span></button>
+      <button type="button" class="btn btn-primary btn-xs inspectionItem-move-up"><span class="glyphicon glyphicon-arrow-up"></span></button>
+      <button type="button" class="btn btn-primary btn-xs inspectionItem-move-down"><span class="glyphicon glyphicon-arrow-down"></span></button>
+      {{/if}}
+    </table>
+	  <div class="dd-handle inspection-item" id={{item._id}}>
+		  {{item.summary}} <em class="label {{labelColour}}">{{getTimeInQueue}}</em>   <em class="label {{labelColour}}">{{getUser}}</em>
+		</div>
+	</li>
+</template>

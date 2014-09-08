@@ -1,0 +1,10 @@
+<template name='layout'>
+	{{> header}}
+  {{> leftPanel}}
+	<div id="main" role="main">
+		<div id="content">
+      {{> yield}}
+		</div>
+  </div>
+  {{> footer}}
+</template>

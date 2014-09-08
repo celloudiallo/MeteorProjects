@@ -1,0 +1,205 @@
+<template name="insertPersonForm">
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left">Add a Person</h3>
+    </div>
+    <div class="panel-body">   
+      <!--{{> quickForm collection="People" id="insertPersonForm" maxCount=10 type="insert" template="bootstrap3" label-class="col-sm-3" input-col-class="col-sm-9" fields="clockNumber,forename,surname,middlename,dateOfBirth,dateJoined,houseID,street,city,county,country,postCode,phoneNumber,extension,carReg,email,location,image,jobTitle,department,contract" minTooltipText=false maxTooltipText=false removeButtons=true}}--> <!--,documents,supervisors,supervising,assignedTasks,currentTask,assets,createdAt-->
+      {{#autoForm collection='People' id='insertPersonForm' type='insert' template='bootstrap3-horizontal' class='form-horizontal'}}
+        <fieldset>
+          <div class="form-group {{#if afFieldIsInvalid name='clockNumber'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='clockNumber' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='clockNumber' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='clockNumber'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='forename'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='forename' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='forename' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='forename'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='surname'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='surname' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='surname' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='surname'}}}</span>
+            </div>
+          </div>
+          {{> afArrayField name='middlename' template='bootstrap3-horizontal' input-col-class='col-sm-9' label-class='col-sm-3' minTooltipText='min' maxTooltipText='max' removeButtons=false}}
+          <div class="form-group {{#if afFieldIsInvalid name='dateOfBirth'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='dateOfBirth' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='dateOfBirth' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='dateOfBirth'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='dateJoined'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='dateJoined' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='dateJoined' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='dateJoined'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='houseID'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='houseID' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='houseID' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='houseID'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='street'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='street' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='street' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='street'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='city'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='city' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='city' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='city'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='county'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='county' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='county' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='county'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='country'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='country' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='country' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='country'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='postCode'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='postCode' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='postCode' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='postCode'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='phoneNumber'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='phoneNumber' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='phoneNumber' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='phoneNumber'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='extension'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='extension' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='extension' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='extension'}}}</span>
+            </div>
+          </div>
+          {{> afArrayField name='carReg' template='bootstrap3-horizontal' input-col-class='col-sm-9' label-class='col-sm-3'}}
+          {{> afArrayField name='email' template='bootstrap3-horizontal' input-col-class='col-sm-9' label-class='col-sm-3'}}
+          <div class="form-group {{#if afFieldIsInvalid name='location'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='location' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='location' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='location'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='image'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='image' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='image' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='image'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='jobTitle'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='jobTitle' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='jobTitle' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='jobTitle'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='department'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='department' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='department' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='department'}}}</span>
+            </div>
+          </div>
+          <div class="form-group {{#if afFieldIsInvalid name='contract'}}has-error{{/if}}">
+            {{> afFieldLabel class='col-sm-3' name='contract' template = 'bootstrap3'}}
+            <div class='col-sm-9'>
+              {{> afFieldInput name='contract' template='bootstrap3-horizontal'}}
+              <span class='help-block'>{{{afFieldMessage name='contract'}}}</span>
+            </div>
+          </div>
+        </fieldset>
+        <div class='form-group'>
+          <div class='col-sm-3'></div>
+          <div class='col-sm-9'>
+            <button  type='submit' class='btn btn-primary'>Submit</button>
+          </div>
+        </div>
+      {{/autoForm}}
+    </div>
+  </div>
+  <br/>
+  {{> peopleTable }}
+</template>
+
+<template name="updatePersonForm">
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left">Edit a Person</h3>
+    </div>
+    <div class="panel-body">
+      {{> quickForm collection="People" doc=this id="updatePersonForm" type="update" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"}}
+    </div>
+  </div>
+  <br/>
+  {{> peopleTable }}
+</template>
+
+<template name="peopleTable">
+  {{> autocomplete1}}
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left">All People</h3>
+      <div class="btn-group pull-right">
+        <a href="/" class="btn btn-primary">Add Person</a>
+      </div>
+    </div>
+    <div class="panel-body">
+  
+      <table class="table table-bordered table-striped table-condensed">
+        <thead>
+          <th>Clock No.</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Created</th>
+          <th>Remove</th>      
+        </thead>
+        <tbody>
+          {{#each people}}
+          <tr>
+            <td>{{clockNumber}}</td>
+            <td><a type="button" href="{{pathFor 'updatePersonForm'}}">{{fullName}}</a></td>
+            <td>{{fullAddress}}</td>
+            <td>{{age}}</td>
+            <td>{{daysSinceCreate}}</td>
+            <td>
+              {{#autoForm collection="People" doc=this type="remove" id="btnDeletePerson"}}
+              <button type="submit" class="btn-xs btn-primary">Delete</button>
+              {{/autoForm}}
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      </div>
+  </div>
+</template>

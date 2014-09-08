@@ -1,0 +1,11 @@
+.NISLogo{width:50%; height:50%;}
+.NISLogo-container{width: 100%; text-align: center;}
+#left-panel{
+  overflow: visible;
+}
+.inspectionItem-buttons{
+  position:absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

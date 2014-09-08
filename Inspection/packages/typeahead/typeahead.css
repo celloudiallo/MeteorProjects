@@ -1,0 +1,31 @@
+/* basic typeahead styles */
+
+.tt-dropdown-scroll .tt-dropdown-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.tt-dropdown-menu {
+  width: 422px;
+  margin-top: 3px;
+  padding: 8px 0;
+  background-color: #fff;
+  color: #000000;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion p {
+  margin: 0;
+}

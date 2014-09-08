@@ -1,0 +1,95 @@
+/*! ClockPicker v{package.version} for Bootstrap (http://weareoutman.github.io/clockpicker/)
+ * Copyright 2014 Wang Shenwei.
+ * Licensed under MIT (https://github.com/weareoutman/clockpicker/blob/master/LICENSE)
+ */
+.clockpicker-moving {
+cursor:move;
+}
+
+.clockpicker-align-left.popover>.arrow {
+left:25px;
+}
+
+.clockpicker-align-top.popover>.arrow {
+top:17px;
+}
+
+.clockpicker-align-right.popover>.arrow {
+left:auto;
+right:25px;
+}
+
+.clockpicker-align-bottom.popover>.arrow {
+top:auto;
+bottom:6px;
+}
+
+.clockpicker-popover .popover-title {
+background-color:#fff;
+color:#999;
+font-size:24px;
+font-weight:700;
+line-height:30px;
+text-align:center;
+}
+
+.clockpicker-popover .popover-content {
+background-color:#f8f8f8;
+padding:12px;
+}
+
+.clockpicker-plate {
+background-color:#fff;
+border:1px solid #ccc;
+width:200px;
+height:200px;
+overflow:visible;
+position:relative;
+}
+
+.clockpicker-canvas,.clockpicker-dial {
+width:200px;
+height:200px;
+position:absolute;
+left:-1px;
+top:-1px;
+}
+
+.clockpicker-minutes {
+visibility:hidden;
+}
+
+.clockpicker-tick {
+color:#666;
+line-height:26px;
+text-align:center;
+width:26px;
+height:26px;
+position:absolute;
+cursor:pointer;
+}
+
+.clockpicker-tick.active,.clockpicker-tick:hover {
+background-color:rgba(0,149,221,.25);
+}
+
+.clockpicker-button {
+background-image:none;
+background-color:#fff;
+border-width:1px 0 0;
+margin:0;
+padding:10px 0;
+}
+
+.clockpicker-button:hover {
+background-image:none;
+background-color:#ebebeb;
+}
+
+.clockpicker-button:focus {
+outline:0!important;
+}
+
+.clockpicker .input-group-addon,.clockpicker-popover .popover-title span {
+cursor:pointer;
+}

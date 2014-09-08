@@ -1,0 +1,33 @@
+<head>
+  <title>FormBuilder</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> peopleForm}}
+  </div>
+</body>
+
+
+
+<template name="peopleForm">
+  <button type="button" class="btn btn-primary fbShow-create">Show Create</button>
+  <button type="button" class="btn btn-primary fbShow-update">Show Update</button>
+  <button type="button" class="btn btn-primary fbShow-read">Show Read</button>
+  <div class="panel panel-default">
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title pull-left">Add a Person</h3>
+    </div>
+    <div class="panel-body">
+      {{#if showCreate}}
+        {{> fbWrapper collection="People" type="create" labelWidth=3 inputWidth=9}}
+      {{else}} 
+        {{#if showUpdate}}
+          {{> fbWrapper collection="People" type="update" document=getPerson labelWidth=3 inputWidth=9}}
+        {{else}}
+          {{> fbWrapper collection="People" type="read" document=getPerson labelWidth=3 inputWidth=9}}
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+</template>

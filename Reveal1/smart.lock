@@ -1,0 +1,61 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "font-awesome": {},
+      "jqueryui": {},
+      "select2": {},
+      "bootstrap-slider": {},
+      "jquery-sparklines": {},
+      "flot": {},
+      "fullcalendar": {}
+    },
+    "packages": {
+      "font-awesome": {
+        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
+        "tag": "v4.1.0",
+        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "jqueryui": {
+        "git": "https://github.com/mizzao/meteor-jqueryui.git",
+        "tag": "v1.11.0",
+        "commit": "06194edc0bdbb28c34b3a656bf9cb6a32718b44e"
+      },
+      "select2": {
+        "git": "https://github.com/nate-strauser/meteor-select2.git",
+        "tag": "v3.4.5",
+        "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
+      },
+      "bootstrap-slider": {
+        "git": "https://github.com/kidovate/meteor-bootstrap-slider.git",
+        "tag": "v0.0.5",
+        "commit": "0a0421f3ceea41d05ad0c90d217589954f0dc3a0"
+      },
+      "jquery-sparklines": {
+        "git": "https://github.com/lumapictures/meteor-jquery-sparklines.git",
+        "tag": "v1.0.1",
+        "commit": "33028befd91655bde8bb6523aa219784b1fc5722"
+      },
+      "flot": {
+        "git": "https://github.com/austinrivas/meteor-flot.git",
+        "tag": "v1.0.6",
+        "commit": "9c9b798f0a05a4a708cdc031befeb99da4d7e204"
+      },
+      "fullcalendar": {
+        "git": "https://github.com/TimHeckel/meteor-fullcalendar.git",
+        "tag": "v1.6.1",
+        "commit": "78dba7c564bf7baacf6556c70a3cc179d0e137c4"
+      },
+      "build-fetcher": {
+        "git": "https://github.com/mizzao/meteor-build-fetcher.git",
+        "tag": "v0.2.0",
+        "commit": "5202ca83277860d798c6ff2ef1d8fe1bce007d0f"
+      },
+      "jquery-ui": {
+        "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
+        "tag": "v1.9.2",
+        "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<template name='leftPanel'>
+<aside id="left-panel">
+   <!-- User info -->
+			<div class="login-info">
+				<span class="dropdown"> <!-- User image size is adjusted inside CSS, it should stay as it --> 
+					<a class="dropdown-toggle" id="show-shortcut" data-toggle="dropdown">
+						<img src="img/avatars/male.png" alt="me" class="offline userimage" onerror="if(this.src != 'img/avatars/male.png') this.src = 'img/avatars/male.png';"/> 
+						<span>{{getFullname}}</span>
+            <i class="fa fa-angle-down"></i>
+					</a>
+          <!-- Suggestion: populate this list with fetch and push technique -->
+          <ul class="dropdown-menu" role="menu" aria-labelledby="show-shortcut" style="padding:5px">
+            {{#if currentUser}}
+            <li>
+              <input type="text" class="login-username" placeholder="Username">
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a class="logout-button"><i class="fa fa-sign-out"></i> Logout</a>
+            </li>
+            {{else}}
+            <li>
+              <input type="text" class="login-clocknumber" placeholder="Clocknumber">
+            </li>
+            <li>
+              <a class="login-button"><i class="fa fa-sign-in"></i> Login</a>
+            </li>
+            {{/if}}
+          </ul>
+          <!-- end dropdown-menu-->
+				</span>
+			</div>
+			<!-- end user info -->
+  
+			<!-- NAVIGATION -->
+			<nav>
+				<ul>
+					<li class="active">
+						<a href="/home" class="navbar-link"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Home</span></a>
+					</li>
+          <li>
+						<a href="/inspection" class="navbar-link"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Inspection</span><span class="sparklineInspection pull-right menu-item-parent">Loading..</span></a>
+					</li>
+				</ul>
+			</nav>
+			<span class="minifyme"> 
+				<i class="fa fa-arrow-circle-left hit"></i> 
+			</span>
+
+		</aside>
+</template>

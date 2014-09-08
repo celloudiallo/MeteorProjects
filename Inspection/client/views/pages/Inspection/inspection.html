@@ -1,0 +1,92 @@
+<template name='inspection'>
+  <div class="modal fade popup-bookIn">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Book in New Item</h4>
+        </div>
+        <div class="modal-body">
+          {{> fbWrapper hookID="form1" collection="InspectionItems" type="create" labelWidth=3 inputWidth=9}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade popup-ncr">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Please enter the NCR number</h4>
+        </div>
+        <div class="modal-body">
+          {{> fbWrapper hookID="form2" collection="InspectionItems" type="update" labelWidth=3 inputWidth=9 filter=8}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Inspection</h1>
+				<section id="widget-grid" class="">
+					<div class="row">
+						<article class="col-sm-12">
+							<div class="jarviswidget well" id="wid-id-0">
+								<header>
+									<span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+									<h2>My Data </h2>
+								</header>
+								<div>
+									<div class="jarviswidget-editbox">
+									</div>
+									<div class="widget-body">
+										<div id="nestable-menu">
+											<button type="button" class="btn btn-default btn-bookIn">
+												Book In
+											</button>
+                      {{> qrScan}}
+										</div>
+										<div class="row">
+                      
+											<div class="col-sm-6 col-lg-3" style="background:#C0C0C0;">
+												<h3 class="txt-color-white">Ready To Inspect</h3>
+                        <ul class="dd-list">
+                          {{#each getReadyToInspect}}
+                            {{> inspectionItem item=this labelColour="label-default"}}
+                          {{/each}}
+                        </ul>
+											</div>
+
+											<div class="col-sm-6 col-lg-3 bg-color-blue">
+												<h3 class="txt-color-white">Inspection Started</h3>
+				                <ul class="dd-list">
+                          {{#each getInspecting}}
+                            {{> inspectionItem item=this labelColour="label-primary"}}
+                          {{/each}}
+                        </ul>
+											</div>
+				
+											<div class="col-sm-6 col-lg-3 bg-color-green">
+												<h3 class="txt-color-white">Inspection Passed</h3>
+				                <ul class="dd-list">
+                          {{#each getPassed}}
+                            {{> inspectionItem item=this labelColour="label-success"}}
+                          {{/each}}
+                        </ul>
+											</div>
+				
+                      <div class="col-sm-6 col-lg-3 bg-color-red">
+												<h3 class="txt-color-white">Inspection Failed</h3>
+											  <ul class="dd-list">
+                          {{#each getFailed}}
+                            {{> inspectionItem item=this labelColour="label-danger"}}
+                          {{/each}}
+                        </ul>
+											</div>
+                      
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+</template>

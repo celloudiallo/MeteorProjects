@@ -1,0 +1,11 @@
+<template name="autocomplete1">
+  {{> inputAutocomplete settings=settings id="legend" class="form-control" name="legend" placeholder="Legend" }}
+</template>
+
+<template name="standardLegends">
+  {{fullName}}
+</template>
+
+<template name="serverNoMatch">
+  <span class="text-danger">Nothing found on the server for <b>{{getFilter}}</b>!</span>
+</template>

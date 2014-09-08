@@ -1,0 +1,13 @@
+<template name="imageList">
+  <p>Images:</p>
+  <input class='file-select' type='file' accept="image/*"><br>
+  <ul>
+    {{#each images}}
+  URL: {{this.url}}
+  <img src="{{this.url store='images'}}" width=50 alt="image">
+{{/each}}
+  </ul>
+</template>
+
+
+

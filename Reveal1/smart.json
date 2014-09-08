@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "font-awesome": {},
+    "jqueryui": {},
+    "select2": {},
+    "bootstrap-slider": {},
+    "jquery-sparklines": {},
+    "flot": {},
+    "fullcalendar": {}
+  }
+}
