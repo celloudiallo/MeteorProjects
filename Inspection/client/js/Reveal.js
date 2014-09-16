@@ -129,7 +129,10 @@ Reveal.Inspection.moveItemUp = function(id, checks){
     });
   }
   else if(item.status==='Inspecting'){
-    bootbox.dialog({
+    if(Meteor.user().username !== item.inspStart.user)
+        Notifications.error("Move item up failed", "You are not the owner of this item.");
+    else
+        bootbox.dialog({
       message: "Have you finished inspecting this item?<br><b>" + item.summary + "</b><br>If so did it pass or fail inspection?",
       title: "Inspection Finished?",
       closeButton: true,

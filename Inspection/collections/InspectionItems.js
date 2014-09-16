@@ -72,14 +72,13 @@ if(Meteor.isServer && (InspectionItems.find().count() === 0) && false){
 //Server and client need to see the same schema
 InspectionItems.schema = {
   PA: {
-    controller: 'fbControllerNumber',
-    view: 'fbViewNumber',
-    labelText: "PA Number",
-    asYouType: true,
+    controller: 'fbControllerTypeahead',
+    view: 'fbViewTypeahead',
+    labelText: 'PA',
     //Specific
-    minValue: 14000,
-    maxValue: 50000,
-    places:1,
+    dataSource: 'PAs.PA',
+    placeholder: 'Select the PA Number',
+    isNumber :true,
     filter:7
   },
   SE: {
@@ -102,15 +101,12 @@ InspectionItems.schema = {
     filter:7
   },
   IT: {
-    controller: 'fbControllerNumber',
-    view: 'fbViewNumber',
-    labelText: "Item Number",
+    controller: 'fbControllerText',
+    view: 'fbViewText',
+    labelText: "Item",
     asYouType: true,
     optional:true,
-    //Specific
-    minValue: 1,
-    maxValue: 50000,
-    places:1,
+    maxLength:10,
     filter:7
   },
   GR: {

@@ -11,12 +11,17 @@ Template.inspectionItem.helpers({
   },
   getUser:function(){
     var item = this.item;
+    var username = "";
     if(item.status==="Ready")
-      return item.added.user;
+      username = item.added.user;
     else if(item.status==="Inspecting")
-      return item.inspStart.user;
+      username = item.inspStart.user;
     else if((item.status==="Passed") || (item.status==="Failed"))
-      return item.inspEnd.user;
+      username = item.inspEnd.user;
+    var user = Meteor.users.findOne({username:username});
+    if(user && user.profile && user.profile.fullname)
+        return user.profile.fullname;
+    return username;
   },
   getEditAccess:function(){
     var user = Meteor.user();

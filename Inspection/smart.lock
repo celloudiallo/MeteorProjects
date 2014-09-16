@@ -2,75 +2,29 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "font-awesome": {},
       "jquery-sparklines": {},
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.8.2"
-      },
-      "moment": {},
       "notifications": {}
     },
     "packages": {
-      "font-awesome": {
-        "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
-        "tag": "v4.1.0",
-        "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
-      },
       "jquery-sparklines": {
         "git": "https://github.com/lumapictures/meteor-jquery-sparklines.git",
         "tag": "v1.0.1",
         "commit": "33028befd91655bde8bb6523aa219784b1fc5722"
       },
-      "iron-router": {
-        "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.8.2",
-        "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
-      },
-      "moment": {
-        "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.8.1",
-        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
-      },
       "notifications": {
         "git": "https://github.com/gfk-ba/meteor-notifications.git",
-        "tag": "v0.6.0",
-        "commit": "9b15974266b6e36d87e98b164c429872f7db885e"
-      },
-      "iron-layout": {
-        "git": "https://github.com/EventedMind/iron-layout.git",
-        "tag": "v0.2.0",
-        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
-      },
-      "munit": {
-        "git": "https://github.com/spacejamio/meteor-munit.git",
-        "tag": "v0.2.0",
-        "commit": "9fbf742c3ea863d9d37f608d58f8fda646c01b2c"
-      },
-      "blaze-layout": {
-        "git": "https://github.com/EventedMind/blaze-layout.git",
-        "tag": "v0.2.5",
-        "commit": "273e3ab7d005d91a1a59c71bd224533b4dae2fbd"
-      },
-      "iron-core": {
-        "git": "https://github.com/EventedMind/iron-core.git",
-        "tag": "v0.2.0",
-        "commit": "0e48b5dc50d03f01025b7b900fb5ce2f13d52cad"
-      },
-      "iron-dynamic-template": {
-        "git": "https://github.com/EventedMind/iron-dynamic-template.git",
-        "tag": "v0.2.1",
-        "commit": "4dd1185c4d9d616c9abdb3f33e4a7d5a88db7e18"
-      },
-      "chai": {
-        "git": "https://github.com/spacejamio/meteor-chai.git",
-        "tag": "v0.1.5",
-        "commit": "9c8f1f769839c946f11f580b8c6f8601f9286a66"
+        "tag": "v1.0.5",
+        "commit": "f61cd5dcede6cc572bc045dad11c4634db79267a"
       },
       "sinon": {
         "git": "https://github.com/spacejamio/meteor-sinon.git",
         "tag": "v0.1.5",
         "commit": "5078abefbfc67a6c4c19f628ceba4249b84b4e07"
+      },
+      "chai": {
+        "git": "https://github.com/spacejamio/meteor-chai.git",
+        "tag": "v0.1.5",
+        "commit": "9c8f1f769839c946f11f580b8c6f8601f9286a66"
       }
     }
   }

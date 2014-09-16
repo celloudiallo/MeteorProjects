@@ -20,11 +20,10 @@ Template.inspection.created = function(){
     Session.set('TimerOneMinute', value);
   }, 60000);
   FormBuilder.setHook('form1', 'beforeCreate', function(obj){
-    if(Reveal.Inspection.addItem(obj, false, false)){
-      template.$('.popup-bookIn').modal('hide');
-      return true;
-    }
-    return false;
+    return Reveal.Inspection.addItem(obj, false, false);
+  });
+  FormBuilder.setHook('form1', 'afterCreate', function(obj, error){
+    if(!error) template.$('.popup-bookIn').modal('hide');
   });
   FormBuilder.setHook('form2', 'beforeUpdate', function(obj){
     var formObj = FormBuilder.forms.findOne($(".popup-ncr .form-horizontal")[0].name);

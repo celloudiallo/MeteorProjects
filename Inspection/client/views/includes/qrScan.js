@@ -8,9 +8,9 @@ var getSource = function(template){
   //Find a camera that is facing the environment or has no facing value
   var data = template.qrScan;
   data.videoSource = {error:true, id:'Didnt find any cameras'};
-  if (MediaStreamTrack && MediaStreamTrack.getSources){
+  if ((typeof MediaStreamTrack === 'function') && (typeof MediaStreamTrack.getSources === 'function')){
     MediaStreamTrack.getSources(function (sourceInfos) {
-      for (var i = 0; i != sourceInfos.length; ++i) {
+      for (var i = 0; i !== sourceInfos.length; ++i) {
         var source = sourceInfos[i];
         if ((sourceInfos[i].kind === 'video') && ((source.facing === '')||(source.facing === 'environment')))
           data.videoSource = {error:false, id:source.id};

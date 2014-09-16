@@ -7,10 +7,13 @@ Template.header.helpers({
     return (!user || (user.username !== "5043") || (Session.get("EditComputerID") !== true));
   },
   getLogin:function(){
-    var computerID = localStorage.getItem("ComputerID");
-    return computerID === '9999';
+    var showLogin = localStorage.getItem("ShowLogin");
+    return !!showLogin;
   }
 });
+
+if(!localStorage.getItem("ComputerID"))
+    localStorage.setItem("ComputerID", 9999);
 
 Template.header.events({
   'blur #computerID':function(event, template){
